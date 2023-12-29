@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+  pre_build:
+    commands:
+      - echo "Installing AWS CLI..."
+      - apt-get update && apt-get install -y python3-pip
+      - pip3 install awscli
+  build:
+    commands:
+      - echo "Emptying S3 bucket..."
+      - aws s3 rm s3://your-s3-bucket-name --recursive
+      - echo "Syncing static website to S3..."
+      - aws s3 sync . s3://your-s3-bucket-name --exclude ".git/*"
