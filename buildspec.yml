@@ -12,6 +12,6 @@ phases:
   build:
     commands:
       - echo "Emptying S3 bucket..."
-      - aws s3 rm s3://your-s3-bucket-name --recursive
+      - aws s3 rm s3://msadeq.de --recursive
       - echo "Syncing static website to S3..."
-      - aws s3 sync . s3://your-s3-bucket-name --exclude ".git/*"
+      - aws s3 sync . s3://msadeq.de --exclude ".git/*"
