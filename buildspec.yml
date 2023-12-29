@@ -3,4 +3,4 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws s3 sync . s3://your-s3-bucket-name/ --delete
+      - aws s3 sync . s3://msadeq.de/ --delete
