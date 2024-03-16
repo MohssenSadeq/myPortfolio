@@ -42,4 +42,4 @@ To view a live example, **[click here](https://msadeq.de/)**
 * [<b>Materialize</b>](https://materializecss.com/) - A CSS framework to get Google's Material Design components.
 * [<b>Typed.js</b>](https://mattboldt.com/demos/typed-js/) - JavaScript Library
 
-<p> As I mentioned you can use Github pages to host it the easiest way</p>
+<p> As I mentioned in the Installation & Deployment section you can use Github pages to host it the easiest way</p>
