@@ -41,3 +41,5 @@ To view a live example, **[click here](https://msadeq.de/)**
 * [<b>AWS S3, CloudFront, and Route53</b>](https://aws.amazon.com/pm/serv-s3/?gclid=Cj0KCQjwhtWvBhD9ARIsAOP0GojE1XlVqxjHDy4KsuySbCwoUVS4PX3tEmoPYqVPZKyuR9jeFEQ9PuoaAvXXEALw_wcB&trk=518a7bef-5b4f-4462-ad55-80e5c177f12b&sc_channel=ps&ef_id=Cj0KCQjwhtWvBhD9ARIsAOP0GojE1XlVqxjHDy4KsuySbCwoUVS4PX3tEmoPYqVPZKyuR9jeFEQ9PuoaAvXXEALw_wcB:G:s&s_kwcid=AL!4422!3!645186213484!e!!g!!aws%20s3!19579892800!143689755565) - To host my static website (HTML, CSS, JS).
 * [<b>Materialize</b>](https://materializecss.com/) - A CSS framework to get Google's Material Design components.
 * [<b>Typed.js</b>](https://mattboldt.com/demos/typed-js/) - JavaScript Library
+
+<p> As I mentioned you can use Github pages to host it the easiest way</p>
