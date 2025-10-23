@@ -1,0 +1,55 @@
+# Portfolio Snapshot
+
+<div align="center" style="margin: 2.5rem 0;">
+  <img
+    src="./Sadeq.png"
+    alt="Portrait of Mohssen Sadeq — Systems Administrator & Cloud Engineer"
+    width="280"
+    style="border-radius: 26px; box-shadow: 0 24px 60px -25px rgba(11, 13, 18, 0.55);"
+  />
+  <h1 style="margin-top: 1.25rem; font-size: 2.1rem;">Mohssen Sadeq</h1>
+  <p style="font-size: 1.1rem; color: #8c97ad; max-width: 520px;">
+    Systems Administrator • Cloud Engineer • DevOps Engineer
+  </p>
+  <a href="https://msadeq.de" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Portfolio-msadeq.de-0b0d12?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio badge" />
+  </a>
+  <a href="https://linkedin.com/in/mohssensadeq" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn badge" />
+  </a>
+  <a href="https://github.com/mohssensadeq" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/GitHub-@mohssensadeq-161b22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub badge" />
+  </a>
+</div>
+
+---
+
+I'm **Mohssen Sadeq**, a self-taught Systems Administrator and Cloud Engineer with a decade of hands-on experience hardening infrastructure, modernising legacy estates, and delivering resilient automation across on-prem and cloud environments. Relocating to pursue new challenges sharpened my curiosity, empathy, and focus on building systems that just work—quietly and reliably.
+
+## What I'm Known For
+
+- **Engineering dependable platforms** for organisations such as *University of Aden* and *Al-Salahi Exchange Co.*, alongside a suite of bespoke tools crafted for fast-growing teams.
+- **Bridging operations and development** with clean automation, secure baselines, and observability that keeps stakeholders confident.
+- **Crafting premium digital experiences** (like the portfolio you’re reading) that balance elegance with performance.
+
+## Core Strengths
+
+- **Infrastructure & Operations:** Windows Server, Active Directory, macOS, Debian/Ubuntu, AWS, Docker, Kubernetes, Terraform.
+- **Automation & DevOps:** CI/CD pipelines, Git/GitLab, AWS CodePipeline, Infrastructure as Code, configuration management.
+- **Data & Application Layer:** Microsoft SQL Server, PostgreSQL, DynamoDB, ASP.NET, Windows Forms, Python.
+- **Storytelling with Systems:** Turning complex requirements into intuitive dashboards, polished documentation, and smooth user journeys.
+
+## Current Focus
+
+- Launching refreshed digital presences for regional enterprises and educational institutions.
+- Exploring advanced observability patterns and AI-assisted operations workflows.
+- Mentoring peers transitioning into cloud and automation roles.
+
+## Connect
+
+- Portfolio: [msadeq.de](https://msadeq.de)
+- LinkedIn: [linkedin.com/in/mohssensadeq](https://linkedin.com/in/mohssensadeq)
+- GitHub: [github.com/mohssensadeq](https://github.com/mohssensadeq)
+- Email: [mohssensadequk@gmail.com](mailto:mohssensadequk@gmail.com)
+
+> 💡 **Note:** Every project in this repository is built by me for personal exploration and growth. They aren't official deliverables for any individual or organisation—just the output of a curious mind committed to learning.
