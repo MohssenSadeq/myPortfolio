@@ -151,7 +151,42 @@ strong {
 
 .nav-resume:hover {
   background: var(--accent);
-  color: var(--bg-primary);
+  color: #0b0d12;
+  border-color: var(--accent);
+}
+
+.nav-theme-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  background: transparent;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.nav-theme-toggle .theme-icon {
+  line-height: 1;
+}
+
+.nav-theme-toggle .theme-label {
+  display: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.nav-theme-toggle:hover,
+.nav-theme-toggle:focus-visible {
+  background: var(--accent);
+  color: #0b0d12;
   border-color: var(--accent);
 }
 
@@ -304,7 +339,7 @@ strong {
 
 .btn.primary {
   background: var(--accent);
-  color: var(--bg-primary);
+  color: #0b0d12;
   box-shadow: 0 18px 40px -22px var(--accent);
 }
 
@@ -321,7 +356,7 @@ strong {
 
 .btn.ghost:hover {
   background: var(--accent);
-  color: var(--bg-primary);
+  color: #0b0d12;
 }
 
 .btn.small {
@@ -363,7 +398,7 @@ strong {
 .social-button:hover {
   transform: translateY(-3px);
   background: var(--accent);
-  color: var(--bg-primary);
+  color: #0b0d12;
   box-shadow: 0 10px 35px -20px var(--accent);
 }
 
@@ -447,7 +482,7 @@ strong {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-soft);
   background: linear-gradient(145deg, rgba(212, 175, 55, 0.08), rgba(15, 17, 25, 0.92));
-  box-shadow: 0 32px 70px -60px rgba(0, 0, 0, 0.95);
+  box-shadow: var(--shadow-soft);
   position: relative;
   overflow: hidden;
 }
@@ -806,7 +841,7 @@ strong {
 
 .contact-card:hover .contact-icon {
   background: var(--accent);
-  color: var(--bg-primary);
+  color: #0b0d12;
 }
 
 .contact-card .label {
@@ -821,6 +856,147 @@ strong {
   font-size: 1rem;
   color: var(--text-primary);
   word-break: break-word;
+}
+
+body[data-theme="light"] {
+  --bg-primary: #f8f6ef;
+  --text-primary: #202530;
+  --text-secondary: #4f5664;
+  --text-muted: #777f8f;
+  --accent: #b68a11;
+  --accent-soft: rgba(182, 138, 17, 0.18);
+  --accent-strong: rgba(182, 138, 17, 0.32);
+  --border-soft: rgba(32, 35, 45, 0.12);
+  --shadow-soft: 0 28px 60px -40px rgba(32, 35, 45, 0.35);
+}
+
+body[data-theme="light"] .site-nav {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(32, 35, 45, 0.1);
+}
+
+body[data-theme="light"] .brand {
+  color: var(--text-primary);
+}
+
+body[data-theme="light"] .nav-links a {
+  color: var(--text-muted);
+}
+
+body[data-theme="light"] .nav-links a:hover,
+body[data-theme="light"] .nav-links a:focus,
+body[data-theme="light"] .nav-links a.is-active {
+  color: var(--text-primary);
+}
+
+body[data-theme="light"] .nav-resume {
+  color: var(--text-primary);
+  border-color: rgba(32, 35, 45, 0.16);
+}
+
+body[data-theme="light"] .nav-resume:hover {
+  color: #0b0d12;
+}
+
+body[data-theme="light"] .nav-theme-toggle {
+  border-color: rgba(32, 35, 45, 0.16);
+}
+
+body[data-theme="light"] .nav-theme-toggle:hover,
+body[data-theme="light"] .nav-theme-toggle:focus-visible {
+  color: #0b0d12;
+}
+
+body[data-theme="light"] .hero::before {
+  background: radial-gradient(circle at 15% 20%, rgba(182, 138, 17, 0.16), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(120, 130, 255, 0.18), transparent 55%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(244, 240, 232, 0.9));
+}
+
+body[data-theme="light"] .hero::after {
+  background: linear-gradient(145deg, rgba(182, 138, 17, 0.08), rgba(255, 255, 255, 0.4));
+  opacity: 0.7;
+}
+
+body[data-theme="light"] .portrait-frame {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(244, 239, 227, 0.95));
+  border: 1px solid rgba(32, 35, 45, 0.12);
+}
+
+body[data-theme="light"] .portrait-frame::after {
+  border: 1px solid rgba(32, 35, 45, 0.08);
+}
+
+body[data-theme="light"] .portrait-frame:hover {
+  box-shadow: 0 28px 70px -35px rgba(182, 138, 17, 0.35);
+}
+
+body[data-theme="light"] .about-summary {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(244, 239, 227, 0.95));
+  border: 1px solid rgba(32, 35, 45, 0.12);
+}
+
+body[data-theme="light"] .about-summary::after {
+  background: radial-gradient(circle at top right, rgba(182, 138, 17, 0.12), transparent 55%);
+}
+
+body[data-theme="light"] .highlight {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(32, 35, 45, 0.12);
+}
+
+body[data-theme="light"] .detail-item {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(32, 35, 45, 0.12);
+}
+
+body[data-theme="light"] .card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(32, 35, 45, 0.12);
+}
+
+body[data-theme="light"] .card::before {
+  background: linear-gradient(160deg, rgba(182, 138, 17, 0.08), transparent 60%);
+}
+
+body[data-theme="light"] .card-logo {
+  background: rgba(32, 35, 45, 0.05);
+  border: 1px solid rgba(32, 35, 45, 0.1);
+}
+
+body[data-theme="light"] #experience .card-action {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+body[data-theme="light"] .skill-tag {
+  background: rgba(182, 138, 17, 0.16);
+  border: 1px solid rgba(182, 138, 17, 0.28);
+  color: var(--text-primary);
+}
+
+body[data-theme="light"] .contact-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(32, 35, 45, 0.12);
+  color: var(--text-secondary);
+}
+
+body[data-theme="light"] .contact-card:hover {
+  color: var(--text-primary);
+  border-color: rgba(182, 138, 17, 0.6);
+}
+
+body[data-theme="light"] .contact-icon {
+  background: rgba(182, 138, 17, 0.12);
+  color: var(--accent);
+}
+
+body[data-theme="light"] .site-footer {
+  background: rgba(244, 240, 232, 0.95);
+  border-top: 1px solid rgba(32, 35, 45, 0.12);
+}
+
+body[data-theme="light"] .site-footer p {
+  color: var(--text-muted);
 }
 
 /* Footer */
@@ -899,6 +1075,11 @@ strong {
     display: flex;
   }
 
+  body[data-theme="light"] .nav-links {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(32, 35, 45, 0.12);
+  }
+
   .nav-links a::after {
     display: none;
   }
@@ -906,6 +1087,18 @@ strong {
   .nav-links a,
   .nav-resume {
     width: 100%;
+  }
+
+  .nav-theme-toggle {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.75rem 1.25rem;
+    height: auto;
+    font-size: 1rem;
+  }
+
+  .nav-theme-toggle .theme-label {
+    display: inline;
   }
 
   .nav-resume {

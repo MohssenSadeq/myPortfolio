@@ -78,6 +78,10 @@
         <a href="#education" role="menuitem">Education</a>
         <a href="#contact" role="menuitem">Contact</a>
         <a href="https://docs.google.com/document/d/1S08TbeWXmOFH_0OkaskvhslaD3p5ZjituIreilE5lvs/edit?usp=sharing" class="nav-resume" target="_blank" rel="noopener">Resume</a>
+        <button type="button" class="nav-theme-toggle" role="menuitem" aria-label="Switch to light mode">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+          <span class="theme-label">Dark</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -457,6 +461,59 @@
 
       var navToggle = document.querySelector('.nav-toggle');
       var navLinks = document.querySelector('.nav-links');
+      var themeToggle = document.querySelector('.nav-theme-toggle');
+      var themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
+      var themeLabel = themeToggle ? themeToggle.querySelector('.theme-label') : null;
+      var themeStorageKey = 'portfolio-theme';
+      var storedTheme = null;
+
+      try {
+        storedTheme = localStorage.getItem(themeStorageKey);
+      } catch (error) {
+        storedTheme = null;
+      }
+
+      var systemPrefersDark = typeof window.matchMedia === 'function' ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+      var initialTheme = storedTheme || (systemPrefersDark && systemPrefersDark.matches ? 'dark' : 'light');
+      setTheme(initialTheme, false);
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+          var nextTheme = document.body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+          setTheme(nextTheme);
+          if (typeof recalcNavHeight === 'function') {
+            recalcNavHeight();
+          }
+          if (typeof updateActiveLinkByScroll === 'function') {
+            updateActiveLinkByScroll();
+          }
+        });
+      }
+
+      var handleSystemThemeChange = function (event) {
+        var savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem(themeStorageKey);
+        } catch (error) {
+          savedTheme = null;
+        }
+        if (savedTheme) {
+          return;
+        }
+        setTheme(event.matches ? 'dark' : 'light', false);
+        if (typeof recalcNavHeight === 'function') {
+          recalcNavHeight();
+        }
+        if (typeof updateActiveLinkByScroll === 'function') {
+          updateActiveLinkByScroll();
+        }
+      };
+
+      if (systemPrefersDark && typeof systemPrefersDark.addEventListener === 'function') {
+        systemPrefersDark.addEventListener('change', handleSystemThemeChange);
+      } else if (systemPrefersDark && typeof systemPrefersDark.addListener === 'function') {
+        systemPrefersDark.addListener(handleSystemThemeChange);
+      }
 
       if (navToggle && navLinks) {
         navToggle.addEventListener('click', function () {
@@ -487,6 +544,37 @@
         navAnchors.forEach(function (anchor) {
           anchor.classList.toggle('is-active', anchor.getAttribute('href') === href);
         });
+      }
+
+      function setTheme(theme, persist) {
+        var normalized = theme === 'light' ? 'light' : 'dark';
+        if (normalized === 'light') {
+          document.body.setAttribute('data-theme', 'light');
+        } else {
+          document.body.removeAttribute('data-theme');
+        }
+        if (persist !== false) {
+          try {
+            localStorage.setItem(themeStorageKey, normalized);
+          } catch (error) {
+            // Ignore storage issues
+          }
+        }
+        updateThemeToggle(normalized);
+      }
+
+      function updateThemeToggle(theme) {
+        if (!themeToggle) {
+          return;
+        }
+        var isLight = theme === 'light';
+        if (themeIcon) {
+          themeIcon.textContent = isLight ? '🌙' : '🌞';
+        }
+        if (themeLabel) {
+          themeLabel.textContent = isLight ? 'Dark' : 'Light';
+        }
+        themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
       }
 
       var navAnchors = navLinks ? Array.from(navLinks.querySelectorAll('a[href^="#"]')) : [];
