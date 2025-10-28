@@ -1,4 +1,4 @@
-#Portfolio
+Portfolio
 
 A modern, fully responsive portfolio showcasing my journey as a Systems Administrator and Cloud Engineer. Built to give hiring managers and collaborators a polished view into my background, projects, and tooling expertise.
 
