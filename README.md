@@ -8,7 +8,6 @@ A modern, fully responsive portfolio showcasing my journey as a Systems Administ
 
 ## 🧭 Overview
 
-- **Live Site:** https://msadeq.de/
 - **Focus:** Present experience, projects, skills, education, and contact info in a premium single-page experience.
 - **Tech:** Vanilla HTML/CSS/JS with Typed.js for hero animation, custom styling for light/dark themes, and responsive layouts tuned for devices of all sizes.
 
